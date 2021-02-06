@@ -1,0 +1,19 @@
+{
+    "name": "eriocl/point-test",
+    "description": "Test task",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alex",
+            "email": "eriocl@ya.ru"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/class"
+        }
+    },
+    "require": {
+        "squizlabs/php_codesniffer": "^3.5"
+    }
+}
