@@ -47,4 +47,3 @@ class User
         return password_verify($pass, $result['password_hash']) ? $result['id'] : false;
     }
 }
-

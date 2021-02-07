@@ -16,7 +16,7 @@ if (!empty($_REQUEST['logout'])) {
     <title></title>
 </head>
 <body>
-<?php if (empty($_SESSION['authorized'])): ?>
+<?php if (empty($_SESSION['authorized'])) : ?>
 <div class = "row text-center" id="flash">
 </div>
 <div class="row justify-content-center">
@@ -26,27 +26,30 @@ if (!empty($_REQUEST['logout'])) {
             <div class="form-row">
                 <div class="form-group col-8">
                     <label class="text-muted small">Login</label>
-                    <input type="text" class="form-control" name="user[login]" id="user-login" value="" required>
+                    <input type="text" class="form-control" name="user[login]"
+                           id="user-login" value="" required>
                 </div>
                 <div class="form-group col-8">
                     <label class="text-muted small">Password</label>
-                    <input type="password" class="form-control" name="user[password]" id="user-password" autocomplete="off" required>
+                    <input type="password" class="form-control" name="user[password]"
+                           id="user-password" autocomplete="off" required>
                 </div>
                 <div class="form-row mt-3 text-right">
                     <div class="col text-right">
-                        <button type="submit" class="btn btn-success" id="login" name="login">Submit</button>
+                        <button type="submit" class="btn btn-success"
+                                id="login" name="login">Submit</button>
                     </div>
                 </div>
         </form>
     </div>
-    <?php else: ?>
+<?php else : ?>
     <div class="row justify-content-center p-4">
         <div class="col-12 text-center">User with id=<?=$_SESSION['authorized'] ?> is aithorized</div>
         <form action="" method="POST" class="row justify-content-center">
             <button type="submit" class="btn btn-success col-1" name="logout" value="off">Logout</button>
         </form>
     </div>
-    <?php endif ?>
+<?php endif ?>
 </div>
 <script src="js/main.js"></script>
 </body>
