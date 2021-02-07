@@ -21,12 +21,7 @@ class DbConnection
         $username = 'test',
         $passwd = '123'
     ): \PDO {
-        try {
             $dsn = "pgsql:host=$host;port=$port;dbname=$dbname";
             return new \PDO($dsn, $username, $passwd);
-        } catch (\PDOException $e) {
-            print "Error!: " . $e->getMessage() . "<br/>";
-            exit();
-        }
     }
 }

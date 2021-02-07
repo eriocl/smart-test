@@ -22,6 +22,13 @@ class User
         $this->pdo = $pdo;
     }
 
+/**
+* Конструктор класса
+*
+* @param array $user
+* @return int or bool
+*/
+
     public function getLoginedId($user)
     {
         $login = strtolower($user['login']);
@@ -41,17 +48,3 @@ class User
     }
 }
 
-
-
-/*$name = strtolower($country['name']);
-$capital = strtolower($country['capital']);
-$area = $country['area'];
-$sql = 'INSERT INTO countries (name,capital,area) VALUES (:name,:capital,:area)';
-$stmt = $this->pdo->prepare($sql);
-$stmt->execute(['name' => $name, 'capital' => $capital, 'area' => $area]);
-$errors = $stmt->errorInfo();
-if ($errors[1] === null) {
-    return true;
-} else {
-    throw new \Exception("Ошибка добавления в базу данных. CODE: {$errors[1]} {$errors[2]}");
-}*/
